@@ -21,3 +21,6 @@ jobs:
 
     - name: Run app Check
       run: echo "CI pipeline is running successfully!"
+
+    - name: Deploy to Render
+      run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
